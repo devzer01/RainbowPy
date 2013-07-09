@@ -31,4 +31,7 @@ soup = BeautifulSoup(document)
 
 table = soup.find('div', attrs={"class":"content-details"}).findNext("table")
 
-print table
+records = table.findAll('tr')
+
+for record in records:
+    print record
